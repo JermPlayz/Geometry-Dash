@@ -6,27 +6,64 @@
 [node name="Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_b0c6e")]
-position = Vector2(161, 519)
+position = Vector2(192, 367)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(300, -150)
 
 [node name="OneByOne" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(65, 648)
+position = Vector2(53, 496)
 
 [node name="OneByOne2" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(195, 648)
+position = Vector2(183, 496)
 
 [node name="OneByOne3" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(325, 648)
+position = Vector2(313, 496)
 
 [node name="OneByOne4" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(455, 648)
+position = Vector2(443, 496)
 
 [node name="OneByOne5" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(585, 648)
+position = Vector2(573, 496)
 
 [node name="OneByOne6" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(715, 648)
+position = Vector2(703, 496)
+
+[node name="OneByOne8" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(833, 496)
+
+[node name="OneByOne9" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(963, 496)
+
+[node name="OneByOne10" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1093, 496)
+
+[node name="OneByOne11" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1223, 496)
+
+[node name="OneByOne12" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1353, 496)
+
+[node name="OneByOne13" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1483, 496)
+
+[node name="OneByOne14" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-727, 496)
+
+[node name="OneByOne15" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-597, 496)
+
+[node name="OneByOne16" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-467, 496)
+
+[node name="OneByOne17" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-337, 496)
+
+[node name="OneByOne18" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-207, 496)
+
+[node name="OneByOne19" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-77, 496)
 
 [node name="OneByOne7" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(715, 518)
+position = Vector2(703, 366)
