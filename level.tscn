@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://h3vvdqbaln6r"]
+
+[ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
+[ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://one_by_one.tscn" id="2_05qlf"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_b0c6e")]
+position = Vector2(161, 519)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="OneByOne" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(65, 648)
+
+[node name="OneByOne2" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(195, 648)
+
+[node name="OneByOne3" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(325, 648)
+
+[node name="OneByOne4" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(455, 648)
+
+[node name="OneByOne5" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(585, 648)
+
+[node name="OneByOne6" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(715, 648)
+
+[node name="OneByOne7" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(715, 518)
