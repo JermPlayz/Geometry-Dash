@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://h3vvdqbaln6r"]
+[gd_scene load_steps=5 format=3 uid="uid://h3vvdqbaln6r"]
 
+[ext_resource type="Script" path="res://level.gd" id="1_4tdb2"]
 [ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
 [ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://one_by_one.tscn" id="2_05qlf"]
+[ext_resource type="PackedScene" uid="uid://dn7babjfeyjvj" path="res://kill_zone.tscn" id="4_sf35q"]
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_4tdb2")
 
 [node name="Player" parent="." instance=ExtResource("1_b0c6e")]
 position = Vector2(192, 367)
@@ -67,3 +70,11 @@ position = Vector2(-77, 496)
 
 [node name="OneByOne7" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(703, 366)
+
+[node name="OneByOne7" parent="OneByOne7" instance=ExtResource("2_05qlf")]
+position = Vector2(0, -130)
+
+[node name="KillZone" parent="." instance=ExtResource("4_sf35q")]
+position = Vector2(112, 361)
+
+[connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
