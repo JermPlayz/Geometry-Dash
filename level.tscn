@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
 [ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://one_by_one.tscn" id="2_05qlf"]
 [ext_resource type="PackedScene" uid="uid://dn7babjfeyjvj" path="res://kill_zone.tscn" id="4_sf35q"]
-[ext_resource type="PackedScene" uid="uid://7un5eptgd480" path="res://spike.tscn" id="5_c6ogl"]
+[ext_resource type="PackedScene" path="res://spike.tscn" id="5_c6ogl"]
 [ext_resource type="Script" path="res://kill_zone.gd" id="5_ukar7"]
 
 [node name="Level" type="Node2D"]
@@ -88,11 +88,83 @@ rotation = 2.35619
 position = Vector2(684, 301)
 rotation = 0.785398
 
+[node name="OneByOne24" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2003, 367)
+
+[node name="OneByOne7" parent="OneByOne24" instance=ExtResource("2_05qlf")]
+position = Vector2(0, -130)
+
+[node name="OneByOne8" parent="OneByOne24" instance=ExtResource("2_05qlf")]
+position = Vector2(-390, 0)
+
+[node name="Spike9" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1984, 230)
+rotation = 2.35619
+
+[node name="Spike11" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1594, 360)
+rotation = 2.35619
+
+[node name="Spike10" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1984, 302)
+rotation = 0.785398
+
 [node name="Spike4" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(684, 383)
 rotation = 0.785398
 
 [node name="Spike5" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(1091, 431)
+
+[node name="OneByOne20" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1613, 496)
+
+[node name="OneByOne21" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1743, 496)
+
+[node name="OneByOne22" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1873, 496)
+
+[node name="OneByOne23" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2003, 496)
+
+[node name="Spike6" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1871, 431)
+
+[node name="OneByOne26" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2133, 496)
+
+[node name="OneByOne27" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2263, 496)
+
+[node name="OneByOne28" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2393, 496)
+
+[node name="OneByOne29" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2523, 496)
+
+[node name="Spike7" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2395, 431)
+
+[node name="OneByOne30" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2653, 496)
+
+[node name="OneByOne31" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2783, 496)
+
+[node name="OneByOne32" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2913, 496)
+
+[node name="OneByOne33" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(3043, 496)
+
+[node name="OneByOne34" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(3173, 496)
+
+[node name="OneByOne35" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(3303, 496)
+
+[node name="Spike8" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2911, 431)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
