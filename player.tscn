@@ -36,7 +36,7 @@ func posY():
 	return position.y
 	
 func Explode():
-	get_tree().reload_current_scene()
+	get_tree().reload_current_scene() 
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7v7x6"]
