@@ -80,7 +80,19 @@ position = Vector2(0, -130)
 position = Vector2(-286, 361)
 script = ExtResource("5_ukar7")
 
-[node name="Spike" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(698, 278)
+[node name="Spike2" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(684, 229)
+rotation = 2.35619
+
+[node name="Spike3" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(684, 301)
+rotation = 0.785398
+
+[node name="Spike4" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(684, 383)
+rotation = 0.785398
+
+[node name="Spike5" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1091, 431)
 
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
