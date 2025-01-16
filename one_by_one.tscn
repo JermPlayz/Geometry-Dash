@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbilgqy8ya23r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdehr"]
-size = Vector2(130, 130)
+size = Vector2(130, 1230)
 
 [node name="OneByOne" type="StaticBody2D"]
 
@@ -9,7 +9,8 @@ size = Vector2(130, 130)
 offset_left = -65.0
 offset_top = -65.0
 offset_right = 65.0
-offset_bottom = 65.0
+offset_bottom = 1165.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 550)
 shape = SubResource("RectangleShape2D_bdehr")
