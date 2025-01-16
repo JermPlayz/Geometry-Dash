@@ -14,7 +14,8 @@ script = ExtResource("1_4tdb2")
 position = Vector2(-206, 367)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(300, -150)
+offset = Vector2(400, -200)
+zoom = Vector2(1.25, 1.25)
 
 [node name="OneByOne" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(53, 496)
