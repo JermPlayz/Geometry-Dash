@@ -17,7 +17,6 @@ rotation = 0.790291
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.621751, 10.8212)
 rotation = -0.77638
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tg6yk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
