@@ -11,7 +11,7 @@
 script = ExtResource("1_4tdb2")
 
 [node name="Player" parent="." instance=ExtResource("1_b0c6e")]
-position = Vector2(-206, 367)
+position = Vector2(-644, 367)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(450, -150)
@@ -67,6 +67,42 @@ position = Vector2(-467, 496)
 [node name="OneByOne17" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(-337, 496)
 
+[node name="OneByOne774" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-1245, 496)
+
+[node name="OneByOne775" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-1115, 496)
+
+[node name="OneByOne776" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-985, 496)
+
+[node name="OneByOne777" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-855, 496)
+
+[node name="OneByOne778" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-1763, 496)
+
+[node name="OneByOne779" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-1633, 496)
+
+[node name="OneByOne780" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-1503, 496)
+
+[node name="OneByOne781" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-1373, 496)
+
+[node name="OneByOne782" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-2283, 496)
+
+[node name="OneByOne783" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-2153, 496)
+
+[node name="OneByOne784" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-2023, 496)
+
+[node name="OneByOne785" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(-1893, 496)
+
 [node name="OneByOne18" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(-207, 496)
 
@@ -107,7 +143,7 @@ position = Vector2(703, 366)
 position = Vector2(0, -130)
 
 [node name="KillZone" parent="." instance=ExtResource("4_sf35q")]
-position = Vector2(-286, 361)
+position = Vector2(-724, 361)
 script = ExtResource("5_ukar7")
 
 [node name="Spike2" parent="." instance=ExtResource("5_c6ogl")]
