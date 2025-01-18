@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://h3vvdqbaln6r"]
+[gd_scene load_steps=8 format=3 uid="uid://h3vvdqbaln6r"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_4tdb2"]
 [ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dn7babjfeyjvj" path="res://kill_zone.tscn" id="4_sf35q"]
 [ext_resource type="PackedScene" uid="uid://7un5eptgd480" path="res://spike.tscn" id="5_c6ogl"]
 [ext_resource type="Script" path="res://kill_zone.gd" id="5_ukar7"]
+[ext_resource type="AudioStream" uid="uid://c6xymet0pelfr" path="res://Background Music/Lost It To Trying - Instrumental.mp3" id="7_7gmmv"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_4tdb2")
@@ -18,6 +19,11 @@ offset = Vector2(450, -150)
 zoom = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
 drag_vertical_enabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("7_7gmmv")
+autoplay = true
+playback_type = 1
 
 [node name="OneByOne" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(53, 496)
@@ -137,50 +143,50 @@ position = Vector2(3823, 496)
 position = Vector2(3953, 496)
 
 [node name="OneByOne7" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(703, 366)
+position = Vector2(1875, 371)
 
-[node name="OneByOne7" parent="OneByOne7" instance=ExtResource("2_05qlf")]
-position = Vector2(0, -130)
+[node name="OneByOne788" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1875, 241)
 
 [node name="KillZone" parent="." instance=ExtResource("4_sf35q")]
 position = Vector2(-724, 361)
 script = ExtResource("5_ukar7")
 
 [node name="Spike2" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(684, 229)
+position = Vector2(1856, 234)
 rotation = 2.35619
 
 [node name="Spike3" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(684, 301)
+position = Vector2(1856, 306)
 rotation = 0.785398
 
 [node name="OneByOne24" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(2003, 367)
+position = Vector2(3735, 371)
 
-[node name="OneByOne7" parent="OneByOne24" instance=ExtResource("2_05qlf")]
-position = Vector2(0, -130)
+[node name="OneByOne787" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2785, 372)
 
-[node name="OneByOne8" parent="OneByOne24" instance=ExtResource("2_05qlf")]
-position = Vector2(-390, 0)
+[node name="OneByOne786" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(3735, 241)
 
 [node name="Spike9" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1984, 230)
+position = Vector2(3716, 234)
 rotation = 2.35619
 
 [node name="Spike11" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1594, 360)
+position = Vector2(2766, 365)
 rotation = 2.35619
 
 [node name="Spike10" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1984, 302)
+position = Vector2(3716, 306)
 rotation = 0.785398
 
 [node name="Spike4" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(684, 383)
+position = Vector2(1856, 388)
 rotation = 0.785398
 
 [node name="Spike5" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1091, 431)
+position = Vector2(2263, 436)
 
 [node name="OneByOne20" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(1613, 496)
@@ -195,7 +201,7 @@ position = Vector2(1873, 496)
 position = Vector2(2003, 496)
 
 [node name="Spike6" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1871, 431)
+position = Vector2(3596, 433)
 
 [node name="OneByOne26" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(2133, 496)
@@ -210,7 +216,7 @@ position = Vector2(2393, 496)
 position = Vector2(2523, 496)
 
 [node name="Spike7" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2395, 431)
+position = Vector2(4127, 435)
 
 [node name="OneByOne30" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(2653, 496)
@@ -1299,7 +1305,7 @@ position = Vector2(49676, 496)
 position = Vector2(49806, 496)
 
 [node name="Spike8" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2911, 431)
+position = Vector2(4643, 435)
 
 [node name="OneByOne400" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(52663, 496)
