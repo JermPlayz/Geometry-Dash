@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf2rypb2ppoy8"]
+[gd_scene load_steps=4 format=3 uid="uid://u7wdgn7nnjw0"]
 
 [ext_resource type="Script" path="res://orb.gd" id="1_r30tw"]
 [ext_resource type="Texture2D" uid="uid://bcwtttqt5p7y5" path="res://Sprites/Yellow_Orb.webp" id="1_u8skt"]
