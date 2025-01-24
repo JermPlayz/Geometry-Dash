@@ -36,12 +36,6 @@ playback_type = 1
 position = Vector2(896, 704)
 scale = Vector2(139.72, 1)
 
-[node name="OneByOne2" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(1920, 640)
-
-[node name="OneByOne7" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(1088, 640)
-
 [node name="OneByOne4" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(3008, 256)
 
@@ -52,13 +46,13 @@ position = Vector2(3008, 192)
 position = Vector2(3008, 128)
 
 [node name="Spike" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(896, 640)
+position = Vector2(960, 640)
 
 [node name="Spike2" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1792, 640)
+position = Vector2(1856, 640)
 
 [node name="Spike3" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1728, 640)
+position = Vector2(1792, 640)
 
 [node name="Spike4" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(2240, 640)
@@ -67,7 +61,7 @@ position = Vector2(2240, 640)
 position = Vector2(2176, 640)
 
 [node name="Spike6" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(960, 640)
+position = Vector2(1024, 640)
 
 [node name="Spike8" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(2496, 640)
@@ -80,9 +74,6 @@ position = Vector2(2624, 640)
 
 [node name="Spike14" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(2688, 640)
-
-[node name="Spike15" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2752, 640)
 
 [node name="Spike11" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(2560, 640)
@@ -109,15 +100,15 @@ position = Vector2(2304, 640)
 position = Vector2(2240, 832)
 
 [node name="Orb2" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2304, 512)
+position = Vector2(2240, 512)
 type = 1
 
 [node name="Orb5" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2688, 512)
+position = Vector2(2624, 512)
 type = 1
 
 [node name="Orb6" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2496, 512)
+position = Vector2(2432, 512)
 type = 1
 
 [node name="Orb3" parent="." instance=ExtResource("5_kn38k")]
