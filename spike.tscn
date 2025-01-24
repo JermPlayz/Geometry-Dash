@@ -1,22 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://7un5eptgd480"]
 
-[ext_resource type="Script" path="res://spike.gd" id="1_yn0q7"]
+[ext_resource type="Texture2D" uid="uid://dpvbc14vypc2k" path="res://Sprites/Spike.png" id="1_xd5s7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tg6yk"]
-size = Vector2(87.7028, 85.3652)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b81x"]
+size = Vector2(15.375, 29)
 
-[node name="Spike" type="Area2D"]
-script = ExtResource("1_yn0q7")
+[node name="Spike" type="Area2D" groups=["kill"]]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_top = -63.0
-offset_right = 89.0
-offset_bottom = 27.0
-rotation = 0.790291
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["kill"]]
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("1_xd5s7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.621751, 10.8212)
-rotation = -0.77638
-shape = SubResource("RectangleShape2D_tg6yk")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["kill"]]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_4b81x")
+debug_color = Color(0.991983, 0.0843476, 5.77569e-07, 0.42)
