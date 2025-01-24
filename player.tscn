@@ -13,6 +13,7 @@ var JUMP_VELOCITY = -1000.0
 
 var isOrb = false
 var forceOrb = 0
+var canInvert = false
 
 var gravity = 4100
 
@@ -33,8 +34,13 @@ func _physics_process(delta):
 		
 	velocity.x = SPEED * delta
 
-	if isOrb and (Input.is_action_just_pressed(\"ui_accept\") or Input.is_action_just_released(\"ui_accept\")):
+	if isOrb and Input.is_action_just_pressed(\"ui_accept\"):
 		velocity.y = -forceOrb
+		if canInvert == true :
+			gravity = -gravity
+			JUMP_VELOCITY = -JUMP_VELOCITY
+			rotation = -rotation
+			isOrb = false
 
 	move_and_slide()
 
@@ -51,11 +57,13 @@ func _on_external_area_entered(area: Area2D) -> void:
 	if area.is_in_group(\"orb\") :
 		isOrb = true
 		forceOrb = area.force
+		canInvert = area.invert
 
 func _on_external_area_exited(area: Area2D) -> void:
 	if area.is_in_group(\"orb\") :
 		isOrb = false
 		forceOrb = 0
+		canInvert = false
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7v7x6"]
