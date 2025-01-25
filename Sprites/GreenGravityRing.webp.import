@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw6qvqr6g6o53"
-path="res://.godot/imported/Black_Orb.png-2a407685ebfb05934308f81b365016a7.ctex"
+uid="uid://difmeujbx1jc1"
+path="res://.godot/imported/GreenGravityRing.webp-5c73fdb4312b7b492f553da67d1066df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Black_Orb.png"
-dest_files=["res://.godot/imported/Black_Orb.png-2a407685ebfb05934308f81b365016a7.ctex"]
+source_file="res://Sprites/GreenGravityRing.webp"
+dest_files=["res://.godot/imported/GreenGravityRing.webp-5c73fdb4312b7b492f553da67d1066df.ctex"]
 
 [params]
 

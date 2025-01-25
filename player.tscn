@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://djxrnpm4ot8lf"]
 
 [ext_resource type="Texture2D" uid="uid://8onktml2t7qi" path="res://Sprites/icon.svg" id="1_tg6ay"]
-[ext_resource type="Script" path="res://external.gd" id="2_53f33"]
-[ext_resource type="Script" path="res://area_2d.gd" id="2_l05e3"]
+[ext_resource type="Script" path="res://Code/external.gd" id="2_53f33"]
+[ext_resource type="Script" path="res://Code/area_2d.gd" id="2_l05e3"]
 
 [sub_resource type="GDScript" id="GDScript_0phdo"]
 script/source = "extends CharacterBody2D
@@ -15,11 +15,15 @@ var isOrb = false
 var forceOrb = 0
 var canInvert = false
 
+var isDash = false
+var tempGravity = 0
+var tempJumpVelocity = 0
+
 var gravity = 4100
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and not is_on_ceiling():
 		velocity.y += gravity * delta
 		$Sprite2D.rotation_degrees += 380 * delta
 	else :
@@ -31,9 +35,11 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_pressed(\"ui_accept\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		
+	if Input.is_action_pressed(\"ui_accept\") and is_on_ceiling():
+		velocity.y = JUMP_VELOCITY
+	
 	velocity.x = SPEED * delta
-
+	
 	if isOrb and Input.is_action_just_pressed(\"ui_accept\"):
 		velocity.y = -forceOrb
 		if canInvert == true :
@@ -41,13 +47,32 @@ func _physics_process(delta):
 			JUMP_VELOCITY = -JUMP_VELOCITY
 			rotation = -rotation
 			isOrb = false
-
+		
+	if isDash and Input.is_action_just_pressed(\"ui_accept\"):
+		tempGravity = gravity
+		tempJumpVelocity = JUMP_VELOCITY
+		if Input.is_action_pressed(\"ui_accept\"):
+			gravity = 0
+			JUMP_VELOCITY = 0
+			velocity.y = 0
+		
+	if isDash and Input.is_action_just_released(\"ui_accept\"):
+			gravity = tempGravity
+			JUMP_VELOCITY = tempJumpVelocity
+			if canInvert == true :
+				gravity = -gravity
+				JUMP_VELOCITY = -JUMP_VELOCITY
+				rotation = -rotation
+			velocity.y += gravity * delta
+			isDash = false
+		
 	move_and_slide()
 
 func Explode():
 	SPEED = 0
 	JUMP_VELOCITY = 0
 	$Sprite2D.visible = false
+	$AudioStreamPlayer2D.stop()
 	$Timer.start()
 
 func _on_timer_timeout():
@@ -60,16 +85,23 @@ func _on_external_area_entered(area: Area2D) -> void:
 		canInvert = area.invert
 		
 	if area.is_in_group(\"pad\") :
-			velocity.y = -area.force
-			if area.invert == true :
-				gravity = -gravity
-				JUMP_VELOCITY = -JUMP_VELOCITY
-				rotation = -rotation
+		velocity.y = -area.force
+		if area.invert == true :
+			gravity = -gravity
+			JUMP_VELOCITY = -JUMP_VELOCITY
+			rotation = -rotation
+		
+	if area.is_in_group(\"dash\") :
+		isDash = true
+		canInvert = area.invert
 
 func _on_external_area_exited(area: Area2D) -> void:
 	if area.is_in_group(\"orb\") :
 		isOrb = false
 		forceOrb = 0
+		canInvert = false
+	if area.is_in_group(\"dash\") and not Input.is_action_pressed(\"ui_accept\") :
+		isDash = false
 		canInvert = false
 "
 

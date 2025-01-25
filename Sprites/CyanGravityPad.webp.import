@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ubdx5cxe47ah"
-path="res://.godot/imported/Metal_Orb.webp-ae58cda096ac6b7014db0142c58f0210.ctex"
+uid="uid://btnlxv8plnkfk"
+path="res://.godot/imported/CyanGravityPad.webp-c7fecbe72b0625d9dbc315ba028f6c9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Metal_Orb.webp"
-dest_files=["res://.godot/imported/Metal_Orb.webp-ae58cda096ac6b7014db0142c58f0210.ctex"]
+source_file="res://Sprites/CyanGravityPad.webp"
+dest_files=["res://.godot/imported/CyanGravityPad.webp-c7fecbe72b0625d9dbc315ba028f6c9b.ctex"]
 
 [params]
 

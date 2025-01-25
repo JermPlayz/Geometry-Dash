@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://h3vvdqbaln6r"]
+[gd_scene load_steps=12 format=3 uid="uid://h3vvdqbaln6r"]
 
 [ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
-[ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://one_by_one.tscn" id="2_05qlf"]
-[ext_resource type="PackedScene" uid="uid://7un5eptgd480" path="res://spike.tscn" id="5_c6ogl"]
-[ext_resource type="PackedScene" uid="uid://cf2rypb2ppoy8" path="res://orb.tscn" id="5_kn38k"]
+[ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://Objects/block.tscn" id="2_05qlf"]
+[ext_resource type="PackedScene" uid="uid://7un5eptgd480" path="res://Objects/spike.tscn" id="5_c6ogl"]
+[ext_resource type="PackedScene" uid="uid://cf2rypb2ppoy8" path="res://Objects/orb.tscn" id="5_kn38k"]
+[ext_resource type="PackedScene" uid="uid://cr1ewxuaxg23g" path="res://Objects/pad.tscn" id="5_ld64x"]
 [ext_resource type="AudioStream" uid="uid://c6xymet0pelfr" path="res://Background Music/Lost It To Trying - Instrumental.mp3" id="7_7gmmv"]
+[ext_resource type="PackedScene" uid="uid://c2tjkrctaodt" path="res://Objects/block_upside_down.tscn" id="8_8tlyb"]
+[ext_resource type="PackedScene" uid="uid://djl4yolijuxo7" path="res://Objects/spike_fat.tscn" id="9_5vgc8"]
+[ext_resource type="PackedScene" uid="uid://cb4h8qxj7sxw6" path="res://Objects/spike_small.tscn" id="10_6xyps"]
+[ext_resource type="PackedScene" uid="uid://b1ro6qx6ugxdg" path="res://Objects/dash.tscn" id="10_lfl6i"]
 
 [sub_resource type="GDScript" id="GDScript_g50re"]
 script/source = "extends Node2D
@@ -17,8 +22,9 @@ script = SubResource("GDScript_g50re")
 position = Vector2(0, 640)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(1.00364, 1.00421)
 offset = Vector2(400, 0)
-zoom = Vector2(1.2, 1.2)
+zoom = Vector2(2, 2)
 limit_left = -400
 limit_bottom = 720
 position_smoothing_enabled = true
@@ -33,88 +39,471 @@ autoplay = true
 playback_type = 1
 
 [node name="OneByOne" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(896, 704)
-scale = Vector2(139.72, 1)
-
-[node name="OneByOne4" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(3008, 256)
-
-[node name="OneByOne5" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(3008, 192)
-
-[node name="OneByOne6" parent="." instance=ExtResource("2_05qlf")]
-position = Vector2(3008, 128)
+position = Vector2(7008, 832)
+scale = Vector2(284.96, 5)
 
 [node name="Spike" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(960, 640)
 
-[node name="Spike2" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1856, 640)
-
-[node name="Spike3" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1792, 640)
-
-[node name="Spike4" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2240, 640)
-
-[node name="Spike5" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2176, 640)
-
-[node name="Spike6" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(1024, 640)
-
 [node name="Spike8" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2496, 640)
+position = Vector2(1312, 640)
 
 [node name="Spike9" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2432, 640)
+position = Vector2(1440, 640)
 
 [node name="Spike10" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2624, 640)
-
-[node name="Spike14" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2688, 640)
+position = Vector2(1504, 640)
 
 [node name="Spike11" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2560, 640)
-
-[node name="Spike17" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2944, 192)
-rotation = -1.5708
-
-[node name="Spike19" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2944, 128)
-rotation = -1.5708
-
-[node name="Spike18" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2944, 256)
-rotation = -1.5708
+position = Vector2(1632, 640)
 
 [node name="Spike12" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(2368, 640)
+position = Vector2(1696, 640)
 
 [node name="Spike13" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1760, 640)
+
+[node name="Spike14" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1824, 640)
+
+[node name="Spike15" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1888, 640)
+
+[node name="Spike16" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(1952, 640)
+
+[node name="Spike17" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2016, 640)
+
+[node name="Spike18" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2080, 640)
+
+[node name="Spike19" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2144, 640)
+
+[node name="Spike20" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2208, 640)
+
+[node name="Spike48" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2368, 640)
+
+[node name="Spike50" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2176, -32)
+rotation = 3.14159
+
+[node name="Spike22" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2528, 640)
+
+[node name="Spike23" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2592, 640)
+
+[node name="Spike24" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2656, 640)
+
+[node name="Spike25" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2720, 640)
+
+[node name="Spike26" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2784, 640)
+
+[node name="Spike27" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2848, 640)
+
+[node name="Spike28" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2912, 640)
+
+[node name="Spike29" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(2976, 640)
+
+[node name="Spike30" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3040, 640)
+
+[node name="Spike31" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3104, 640)
+
+[node name="Spike62" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3168, 640)
+
+[node name="Spike63" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3232, 640)
+
+[node name="Spike64" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3296, 640)
+
+[node name="Spike65" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3360, 640)
+
+[node name="Spike66" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3424, 640)
+
+[node name="Spike67" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3488, 640)
+
+[node name="Spike68" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3552, 640)
+
+[node name="Spike69" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3616, 640)
+
+[node name="Spike70" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3680, 640)
+
+[node name="Spike71" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3744, 640)
+
+[node name="Spike72" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3808, 640)
+
+[node name="Spike73" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3872, 640)
+
+[node name="Spike74" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3936, 640)
+
+[node name="Spike75" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4000, 640)
+
+[node name="Spike76" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4064, 640)
+
+[node name="Spike77" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4128, 640)
+
+[node name="Spike78" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4192, 640)
+
+[node name="Spike79" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4256, 640)
+
+[node name="Spike80" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4320, 640)
+
+[node name="Spike81" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4384, 640)
+
+[node name="Spike82" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4448, 640)
+
+[node name="Spike32" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3808, 96)
+rotation = 3.14159
+
+[node name="Spike33" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3872, 96)
+rotation = 3.14159
+
+[node name="Spike34" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3936, 96)
+rotation = 3.14159
+
+[node name="Spike35" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4000, 96)
+rotation = 3.14159
+
+[node name="Spike36" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4064, 96)
+rotation = 3.14159
+
+[node name="Spike37" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4128, 96)
+rotation = 3.14159
+
+[node name="Spike38" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4192, 96)
+rotation = 3.14159
+
+[node name="Spike52" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4256, 96)
+rotation = 3.14159
+
+[node name="Spike53" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4320, 96)
+rotation = 3.14159
+
+[node name="Spike54" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4384, 96)
+rotation = 3.14159
+
+[node name="Spike55" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4448, 96)
+rotation = 3.14159
+
+[node name="Spike56" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4512, 96)
+rotation = 3.14159
+
+[node name="Spike57" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4576, 96)
+rotation = 3.14159
+
+[node name="Spike58" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4640, 96)
+rotation = 3.14159
+
+[node name="Spike83" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4704, 352)
+rotation = 3.14159
+
+[node name="Spike59" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4640, 160)
+rotation = -1.5708
+
+[node name="Spike60" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4640, 224)
+rotation = -1.5708
+
+[node name="Spike61" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(4640, 288)
+rotation = -1.5708
+
+[node name="Spike42" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3584, 96)
+rotation = 3.14159
+
+[node name="Spike43" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3680, 96)
+rotation = 3.14159
+
+[node name="Spike44" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3424, 96)
+rotation = 3.14159
+
+[node name="OneByOne2" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1376, 640)
+
+[node name="OneByOne3" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1376, 576)
+
+[node name="OneByOne4" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1568, 640)
+
+[node name="OneByOne5" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1568, 576)
+
+[node name="OneByOne6" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1568, 512)
+
+[node name="OneByOne7" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(1568, 448)
+
+[node name="OneByOne8" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2464, 640)
+
+[node name="OneByOne9" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2464, 576)
+
+[node name="OneByOne10" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2464, 512)
+
+[node name="OneByOne19" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4512, 640)
+
+[node name="OneByOne21" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4576, 640)
+
+[node name="OneByOne22" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4640, 640)
+
+[node name="OneByOne23" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4704, 640)
+
+[node name="OneByOne24" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4768, 640)
+
+[node name="OneByOne25" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4832, 640)
+
+[node name="OneByOne26" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4896, 640)
+
+[node name="OneByOne27" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(4960, 640)
+
+[node name="OneByOne28" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(5024, 640)
+
+[node name="OneByOne29" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(5088, 640)
+
+[node name="OneByOne30" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(5152, 640)
+
+[node name="OneByOne39" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(5216, 640)
+
+[node name="OneByOne40" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(5280, 640)
+
+[node name="OneByOne41" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(5344, 640)
+
+[node name="OneByOne12" parent="." instance=ExtResource("2_05qlf")]
 position = Vector2(2304, 640)
 
+[node name="OneByOne13" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2304, 576)
+
+[node name="OneByOne14" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2304, 512)
+
+[node name="OneByOne11" parent="." instance=ExtResource("2_05qlf")]
+position = Vector2(2304, 448)
+
+[node name="Pad" parent="." instance=ExtResource("5_ld64x")]
+position = Vector2(1216, 640)
+type = 1
+
 [node name="Orb" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2240, 832)
-
-[node name="Orb2" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2240, 512)
-type = 1
-
-[node name="Orb5" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2624, 512)
-type = 1
-
-[node name="Orb6" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2432, 512)
-type = 1
+position = Vector2(1824, 320)
+type = 5
 
 [node name="Orb3" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2112, 832)
-type = 3
+position = Vector2(2656, 352)
 
 [node name="Orb4" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(2816, 192)
+position = Vector2(2880, 288)
 type = 5
+
+[node name="Orb2" parent="." instance=ExtResource("5_kn38k")]
+position = Vector2(2048, 192)
+type = 3
+
+[node name="OneByOne51" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2176, -96)
+
+[node name="OneByOne52" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2112, -96)
+
+[node name="OneByOne53" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2176, -160)
+
+[node name="OneByOne54" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2112, -160)
+
+[node name="OneByOne55" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2240, -96)
+
+[node name="OneByOne56" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2240, -160)
+
+[node name="OneByOne57" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2176, -224)
+
+[node name="OneByOne58" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2112, -224)
+
+[node name="OneByOne59" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2176, -288)
+
+[node name="OneByOne60" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2112, -288)
+
+[node name="OneByOne61" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2240, -224)
+
+[node name="OneByOne62" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2240, -288)
+
+[node name="OneByOne63" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2176, -352)
+
+[node name="OneByOne64" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2112, -352)
+
+[node name="OneByOne65" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(2240, -352)
+
+[node name="OneByOne31" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3360, 96)
+
+[node name="OneByOne32" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3360, 160)
+
+[node name="OneByOne37" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3520, 288)
+
+[node name="OneByOne38" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3520, 352)
+
+[node name="OneByOne34" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3744, 96)
+
+[node name="OneByOne35" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3744, 160)
+
+[node name="OneByOne36" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3744, 224)
+
+[node name="OneByOne33" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3520, 96)
+
+[node name="OneByOne20" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(3872, -192)
+scale = Vector2(27.0025, 8.01039)
+
+[node name="Spike5" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(3456, 288)
+rotation = -1.5708
+
+[node name="Spike40" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(3584, 288)
+rotation = 1.5708
+
+[node name="Spike41" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(3584, 352)
+rotation = 1.5708
+
+[node name="Spike39" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(3456, 352)
+rotation = -1.5708
+
+[node name="Spike45" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(3456, 96)
+rotation = 3.14159
+
+[node name="Spike47" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(3296, 96)
+rotation = 3.14159
+
+[node name="Spike46" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(3616, 96)
+rotation = 3.14159
+
+[node name="Spike7" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(1248, 640)
+
+[node name="Spike49" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(2240, -32)
+rotation = 3.14159
+
+[node name="Spike51" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(2112, -32)
+rotation = 3.14159
+
+[node name="Spike2" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(2432, 640)
+
+[node name="Spike3" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(2272, 640)
+
+[node name="Spike4" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(928, 640)
+
+[node name="Spike6" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(1024, 640)
+
+[node name="Dash" parent="." instance=ExtResource("10_lfl6i")]
+position = Vector2(4096, 256)
+type = 1
+
+[node name="OneByOne15" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(4704, 96)
+
+[node name="OneByOne16" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(4704, 160)
+
+[node name="OneByOne17" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(4704, 224)
+
+[node name="OneByOne18" parent="." instance=ExtResource("8_8tlyb")]
+position = Vector2(4704, 288)

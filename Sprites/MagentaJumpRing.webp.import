@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcwtttqt5p7y5"
-path="res://.godot/imported/Yellow_Orb.webp-209120f59f5a36c19fbbec2815b9e0de.ctex"
+uid="uid://iteolygwvg3j"
+path="res://.godot/imported/MagentaJumpRing.webp-67315557b5b2b0dff0d42bc0ab7c2626.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Yellow_Orb.webp"
-dest_files=["res://.godot/imported/Yellow_Orb.webp-209120f59f5a36c19fbbec2815b9e0de.ctex"]
+source_file="res://Sprites/MagentaJumpRing.webp"
+dest_files=["res://.godot/imported/MagentaJumpRing.webp-67315557b5b2b0dff0d42bc0ab7c2626.ctex"]
 
 [params]
 

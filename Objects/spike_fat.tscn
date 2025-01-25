@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://djl4yolijuxo7"]
+
+[ext_resource type="Texture2D" uid="uid://dpvbc14vypc2k" path="res://Sprites/Spike.png" id="1_arq7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b81x"]
+size = Vector2(15.375, 12.5)
+
+[node name="Spike" type="Area2D" groups=["kill"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["kill"]]
+position = Vector2(0, 15.975)
+scale = Vector2(0.225, 0.1125)
+texture = ExtResource("1_arq7l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["kill"]]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_4b81x")
+debug_color = Color(0.991983, 0.0843476, 5.77569e-07, 0.42)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ro6qx6ugxdg"]
+
+[ext_resource type="Script" path="res://Code/dash.gd" id="1_jsgwy"]
+[ext_resource type="Texture2D" uid="uid://clwqhugdt67d2" path="res://Sprites/GreenDashRing.webp" id="2_4uxp7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36mx5"]
+size = Vector2(64, 64)
+
+[node name="Dash" type="Area2D" groups=["dash"]]
+script = ExtResource("1_jsgwy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["dash"]]
+position = Vector2(-1.90735e-06, 1.90735e-06)
+scale = Vector2(0.474074, 0.463768)
+texture = ExtResource("2_4uxp7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["dash"]]
+shape = SubResource("RectangleShape2D_36mx5")
