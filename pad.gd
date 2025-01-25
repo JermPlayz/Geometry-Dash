@@ -21,6 +21,9 @@ func _ready():
 		1 :
 			force = 900
 			sprite.texture = load("res://Sprites/Yellow_Orb.webp")
+		2 :
+			force = 1200
+			sprite.texture = load("res://Sprites/Metal_Orb.webp")
 		3 :
 			force = 1500
 			sprite.texture = load("res://Sprites/Orange_Orb.webp")

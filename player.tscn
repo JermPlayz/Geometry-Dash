@@ -58,6 +58,13 @@ func _on_external_area_entered(area: Area2D) -> void:
 		isOrb = true
 		forceOrb = area.force
 		canInvert = area.invert
+		
+	if area.is_in_group(\"pad\") :
+			velocity.y = -area.force
+			if area.invert == true :
+				gravity = -gravity
+				JUMP_VELOCITY = -JUMP_VELOCITY
+				rotation = -rotation
 
 func _on_external_area_exited(area: Area2D) -> void:
 	if area.is_in_group(\"orb\") :

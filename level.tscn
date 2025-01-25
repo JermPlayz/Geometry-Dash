@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
 [ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://one_by_one.tscn" id="2_05qlf"]
 [ext_resource type="PackedScene" uid="uid://7un5eptgd480" path="res://spike.tscn" id="5_c6ogl"]
-[ext_resource type="PackedScene" uid="uid://u7wdgn7nnjw0" path="res://orb.tscn" id="5_kn38k"]
+[ext_resource type="PackedScene" uid="uid://cf2rypb2ppoy8" path="res://orb.tscn" id="5_kn38k"]
 [ext_resource type="AudioStream" uid="uid://c6xymet0pelfr" path="res://Background Music/Lost It To Trying - Instrumental.mp3" id="7_7gmmv"]
 
 [sub_resource type="GDScript" id="GDScript_g50re"]
