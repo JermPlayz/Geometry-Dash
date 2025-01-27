@@ -91,6 +91,11 @@ func _on_external_area_entered(area: Area2D) -> void:
 	if area.is_in_group(\"dash\") :
 		isDash = true
 		canInvert = area.invert
+		
+	if area.is_in_group(\"portal\") :
+		match area.type :
+			0 :
+				$Sprite2D.texture = load(\"res://Sprites/Cube.webp\")
 
 func _on_external_area_exited(area: Area2D) -> void:
 	if area.is_in_group(\"orb\") :
