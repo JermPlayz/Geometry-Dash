@@ -45,7 +45,6 @@ func _physics_process(delta):
 		if canInvert == true :
 			gravity = -gravity
 			JUMP_VELOCITY = -JUMP_VELOCITY
-			rotation = -rotation
 			isOrb = false
 		
 	if isDash and Input.is_action_just_pressed(\"ui_accept\"):
@@ -62,7 +61,6 @@ func _physics_process(delta):
 			if canInvert == true :
 				gravity = -gravity
 				JUMP_VELOCITY = -JUMP_VELOCITY
-				rotation = -rotation
 			velocity.y += gravity * delta
 			isDash = false
 		
@@ -89,7 +87,6 @@ func _on_external_area_entered(area: Area2D) -> void:
 		if area.invert == true :
 			gravity = -gravity
 			JUMP_VELOCITY = -JUMP_VELOCITY
-			rotation = -rotation
 		
 	if area.is_in_group(\"dash\") :
 		isDash = true

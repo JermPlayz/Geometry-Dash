@@ -1,15 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbilgqy8ya23r"]
+[gd_scene load_steps=3 format=3 uid="uid://dbilgqy8ya23r"]
+
+[ext_resource type="Texture2D" uid="uid://djdjnmbw0iu35" path="res://Sprites/RegularBlock01.webp" id="1_4ey33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdehr"]
 size = Vector2(64, 64)
 
 [node name="OneByOne" type="StaticBody2D" groups=["kill"]]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, -8.9407e-07)
+scale = Vector2(0.52459, 0.52459)
+texture = ExtResource("1_4ey33")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bdehr")
