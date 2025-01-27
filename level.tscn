@@ -296,6 +296,26 @@ rotation = 3.14159
 position = Vector2(6496, 96)
 rotation = 3.14159
 
+[node name="Spike160" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(6784, 96)
+rotation = 3.14159
+
+[node name="Spike162" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(6848, 96)
+rotation = 3.14159
+
+[node name="Spike168" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(6912, 96)
+rotation = 3.14159
+
+[node name="Spike173" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(6976, 96)
+rotation = 3.14159
+
+[node name="Spike174" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(7040, 96)
+rotation = 3.14159
+
 [node name="Spike147" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(6432, 96)
 rotation = 3.14159
