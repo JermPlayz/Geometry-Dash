@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://h3vvdqbaln6r"]
+[gd_scene load_steps=13 format=3 uid="uid://h3vvdqbaln6r"]
 
 [ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
 [ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://Objects/block.tscn" id="2_05qlf"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://djl4yolijuxo7" path="res://Objects/spike_fat.tscn" id="9_5vgc8"]
 [ext_resource type="PackedScene" uid="uid://cb4h8qxj7sxw6" path="res://Objects/spike_small.tscn" id="10_6xyps"]
 [ext_resource type="PackedScene" uid="uid://b1ro6qx6ugxdg" path="res://Objects/dash.tscn" id="10_lfl6i"]
+[ext_resource type="PackedScene" uid="uid://7wadv3tos4o1" path="res://Objects/portal.tscn" id="11_io3j7"]
 
 [sub_resource type="GDScript" id="GDScript_g50re"]
 script/source = "extends Node2D
@@ -296,24 +297,36 @@ rotation = 3.14159
 position = Vector2(6496, 96)
 rotation = 3.14159
 
+[node name="Spike159" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(6560, 96)
+rotation = 3.14159
+
 [node name="Spike160" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(6784, 96)
+position = Vector2(6624, 96)
+rotation = 3.14159
+
+[node name="Spike161" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(6688, 96)
 rotation = 3.14159
 
 [node name="Spike162" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(6848, 96)
+position = Vector2(6752, 96)
 rotation = 3.14159
 
 [node name="Spike168" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(6912, 96)
+position = Vector2(6816, 96)
 rotation = 3.14159
 
 [node name="Spike173" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(6976, 96)
+position = Vector2(6880, 96)
 rotation = 3.14159
 
 [node name="Spike174" parent="." instance=ExtResource("5_c6ogl")]
-position = Vector2(7040, 96)
+position = Vector2(6944, 96)
+rotation = 3.14159
+
+[node name="Spike175" parent="." instance=ExtResource("5_c6ogl")]
+position = Vector2(7008, 96)
 rotation = 3.14159
 
 [node name="Spike147" parent="." instance=ExtResource("5_c6ogl")]
@@ -747,18 +760,6 @@ position = Vector2(6048, 96)
 [node name="OneByOne30" parent="." instance=ExtResource("8_8tlyb")]
 position = Vector2(6048, 160)
 
-[node name="OneByOne54" parent="." instance=ExtResource("8_8tlyb")]
-position = Vector2(6592, 96)
-
-[node name="OneByOne55" parent="." instance=ExtResource("8_8tlyb")]
-position = Vector2(6592, 160)
-
-[node name="OneByOne56" parent="." instance=ExtResource("8_8tlyb")]
-position = Vector2(6656, 96)
-
-[node name="OneByOne58" parent="." instance=ExtResource("8_8tlyb")]
-position = Vector2(6656, 160)
-
 [node name="OneByOne24" parent="." instance=ExtResource("8_8tlyb")]
 position = Vector2(5856, 160)
 
@@ -828,7 +829,7 @@ position = Vector2(6528, 384)
 type = 5
 
 [node name="Orb10" parent="." instance=ExtResource("5_kn38k")]
-position = Vector2(6720, 320)
+position = Vector2(6752, 320)
 type = 3
 
 [node name="Spike107" parent="." instance=ExtResource("10_6xyps")]
@@ -853,9 +854,17 @@ rotation = 3.14159
 position = Vector2(5984, 96)
 rotation = 3.14159
 
-[node name="Spike161" parent="." instance=ExtResource("10_6xyps")]
-position = Vector2(6528, 96)
+[node name="Spike177" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(7072, 640)
+
+[node name="Spike178" parent="." instance=ExtResource("10_6xyps")]
+position = Vector2(7040, 96)
 rotation = 3.14159
 
 [node name="Spike108" parent="." instance=ExtResource("9_5vgc8")]
 position = Vector2(5056, 640)
+
+[node name="Portal" parent="." instance=ExtResource("11_io3j7")]
+position = Vector2(7008, 352)
+scale = Vector2(2, 2)
+type = 2
