@@ -854,18 +854,11 @@ rotation = 3.14159
 position = Vector2(5984, 96)
 rotation = 3.14159
 
-[node name="Spike177" parent="." instance=ExtResource("10_6xyps")]
-position = Vector2(7072, 640)
-
-[node name="Spike178" parent="." instance=ExtResource("10_6xyps")]
-position = Vector2(7040, 96)
-rotation = 3.14159
-
 [node name="Spike108" parent="." instance=ExtResource("9_5vgc8")]
 position = Vector2(5056, 640)
 
 [node name="Portal" parent="." instance=ExtResource("11_io3j7")]
-position = Vector2(7008, 352)
+position = Vector2(6976, 352)
 scale = Vector2(2, 2)
 type = 1
 
