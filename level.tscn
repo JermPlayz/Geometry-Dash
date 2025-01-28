@@ -867,4 +867,8 @@ position = Vector2(5056, 640)
 [node name="Portal" parent="." instance=ExtResource("11_io3j7")]
 position = Vector2(7008, 352)
 scale = Vector2(2, 2)
-type = 2
+type = 1
+
+[node name="Portal2" parent="." instance=ExtResource("11_io3j7")]
+position = Vector2(320, 544)
+type = 1
