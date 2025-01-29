@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv1pdn3qt48st"]
+
+[ext_resource type="Texture2D" uid="uid://dospnpbumd135" path="res://Sprites/BlackSlope01.webp" id="1_hlm8s"]
+[ext_resource type="Texture2D" uid="uid://cxqoyg35dcan1" path="res://Sprites/WavySlope01.webp" id="1_o230n"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_np67u"]
+a = Vector2(30, -32)
+b = Vector2(-32, 30)
+
+[node name="OneByOne" type="StaticBody2D" groups=["kill"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, -8.9407e-07)
+scale = Vector2(0.52459, 0.52459)
+texture = ExtResource("1_o230n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["kill"]]
+rotation = -3.14159
+shape = SubResource("SegmentShape2D_np67u")
+one_way_collision = true
+
+[node name="BlackSlope01" type="Sprite2D" parent="." groups=["kill"]]
+position = Vector2(2.5, 4.5)
+scale = Vector2(0.483607, 0.45082)
+texture = ExtResource("1_hlm8s")
