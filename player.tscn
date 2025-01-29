@@ -7,10 +7,7 @@
 [sub_resource type="GDScript" id="GDScript_0phdo"]
 script/source = "extends CharacterBody2D
 
-var isCube = true
 var isWave = false
-var isBall = false
-var isUFO = false
 
 var SPEED = 35500.0
 var JUMP_VELOCITY = -1000.0
@@ -26,7 +23,7 @@ var tempJumpVelocity = 0
 var gravity = 4100
 
 func _physics_process(delta):
-	if isCube == true :
+	if isWave == false :
 		# Add the gravity
 		if not is_on_floor() and not is_on_ceiling():
 			velocity.y += gravity * delta
@@ -52,7 +49,6 @@ func _physics_process(delta):
 				JUMP_VELOCITY = -JUMP_VELOCITY
 				isOrb = false
 				rotation = -rotation
-				canInvert = false
 			
 		if isDash and Input.is_action_just_pressed(\"ui_accept\"):
 			tempGravity = gravity
@@ -73,38 +69,13 @@ func _physics_process(delta):
 				isDash = false
 			
 		move_and_slide()
-		
-	if isWave == true :
+	else :
 		var direction = Vector2.ZERO
-		$Sprite2D.rotation = 0
-		if canInvert == false :
-			if Input.is_action_pressed(\"ui_accept\"):
-				velocity.y = JUMP_VELOCITY
-				if not is_on_ceiling():
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/4, SPEED)
-				else :
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/2, SPEED)
-			else :
-				velocity.y = -JUMP_VELOCITY
-				if not is_on_floor():
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159*3/4, SPEED)
-				else :
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/2, SPEED)
-			
-		if canInvert == true :
-			if Input.is_action_pressed(\"ui_accept\"):
-				velocity.y = -JUMP_VELOCITY
-				if not is_on_floor():
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159*3/4, SPEED)
-				else :
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/2, SPEED)
-			else :
-				velocity.y = JUMP_VELOCITY
-				if not is_on_ceiling():
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/4, SPEED)
-				else :
-					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/2, SPEED)
-			
+		$Sprite2D.rotation = 3.14159/2
+		if Input.is_action_pressed(\"ui_accept\"):
+			velocity.y = JUMP_VELOCITY
+		else :
+			velocity.y = -JUMP_VELOCITY
 		velocity.x = SPEED * delta
 		move_and_slide()
 
@@ -139,52 +110,16 @@ func _on_external_area_entered(area: Area2D) -> void:
 		match area.type :
 			0 :
 				$Sprite2D.texture = load(\"res://Sprites/Cube.webp\")
-				isCube = true
 				isWave = false
-				isBall = false
-				isUFO = false
 			1 :
 				$Sprite2D.texture = load(\"res://Sprites/Wave.webp\")
-				isCube = false
 				isWave = true
-				isBall = false
-				isUFO = false
-			2 :
-				$Sprite2D.texture = load(\"res://Sprites/Ball.webp\")
-				isCube = false
-				isWave = false
-				isBall = true
-				isUFO = false
-			3 :
-				$Sprite2D.texture = load(\"res://Sprites/Ball.webp\")
-				isCube = false
-				isWave = false
-				isBall = false
-				isUFO = true
-			4 :
-				canInvert = true
-			5 :
-				canInvert = false
-		
-	if area.is_in_group(\"speed\") :
-		match area.type :
-			0 :
-				SPEED = 35500 * .5
-			1 :
-				SPEED = 35500
-			2 :
-				SPEED = 35500 * 2
-			3 :
-				SPEED = 35500 * 3
-			4 :
-				SPEED = 35500 * 4
 
 func _on_external_area_exited(area: Area2D) -> void:
 	if area.is_in_group(\"orb\") :
 		isOrb = false
 		forceOrb = 0
 		canInvert = false
-		
 	if area.is_in_group(\"dash\") and not Input.is_action_pressed(\"ui_accept\") :
 		isDash = false
 		canInvert = false
