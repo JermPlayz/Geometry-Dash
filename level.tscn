@@ -1061,7 +1061,12 @@ scale = Vector2(65, 0.993024)
 [node name="OneByOne93" parent="." instance=ExtResource("16_y8rfr")]
 position = Vector2(9472, -160)
 rotation = -3.14159
-scale = Vector2(65, 0.993024)
+scale = Vector2(18, 0.993024)
+
+[node name="OneByOne167" parent="." instance=ExtResource("16_y8rfr")]
+position = Vector2(7584, -160)
+rotation = -3.14159
+scale = Vector2(6.39997, 0.993024)
 
 [node name="OneByOne" parent="." instance=ExtResource("16_y8rfr")]
 position = Vector2(3552, 704)
@@ -1306,10 +1311,71 @@ position = Vector2(8480, 320)
 [node name="OneByOne124" parent="." instance=ExtResource("13_n8td3")]
 position = Vector2(8416, 320)
 
-[node name="Portal2" parent="." instance=ExtResource("11_io3j7")]
-position = Vector2(8192, 96)
-type = 4
+[node name="OneByOne161" parent="." instance=ExtResource("13_n8td3")]
+position = Vector2(8160, 32)
+rotation = 3.14159
 
-[node name="Portal3" parent="." instance=ExtResource("11_io3j7")]
-position = Vector2(8480, 96)
-type = 5
+[node name="OneByOne179" parent="." instance=ExtResource("13_n8td3")]
+position = Vector2(8608, -32)
+rotation = 3.14159
+
+[node name="OneByOne178" parent="." instance=ExtResource("13_n8td3")]
+position = Vector2(8544, 32)
+rotation = 3.14159
+
+[node name="OneByOne162" parent="." instance=ExtResource("13_n8td3")]
+position = Vector2(8288, 32)
+rotation = 3.14159
+
+[node name="OneByOne163" parent="." instance=ExtResource("18_wdtcs")]
+position = Vector2(8352, 32)
+rotation = 3.14159
+
+[node name="OneByOne164" parent="." instance=ExtResource("18_wdtcs")]
+position = Vector2(8224, 32)
+rotation = 3.14159
+
+[node name="OneByOne168" parent="." instance=ExtResource("18_wdtcs")]
+position = Vector2(8096, 32)
+rotation = 3.14159
+
+[node name="OneByOne169" parent="." instance=ExtResource("18_wdtcs")]
+position = Vector2(8032, -32)
+rotation = 3.14159
+
+[node name="OneByOne180" parent="." instance=ExtResource("18_wdtcs")]
+position = Vector2(7968, -96)
+rotation = 3.14159
+
+[node name="OneByOne165" parent="." instance=ExtResource("18_wdtcs")]
+position = Vector2(8480, 32)
+rotation = 3.14159
+
+[node name="OneByOne166" parent="." instance=ExtResource("13_n8td3")]
+position = Vector2(8416, 32)
+rotation = 3.14159
+
+[node name="OneByOne170" parent="." instance=ExtResource("14_1fpvp")]
+position = Vector2(8096, -32)
+rotation = -1.5708
+
+[node name="OneByOne171" parent="." instance=ExtResource("15_c1yl2")]
+position = Vector2(8160, -32)
+
+[node name="OneByOne172" parent="." instance=ExtResource("15_c1yl2")]
+position = Vector2(8224, -32)
+
+[node name="OneByOne173" parent="." instance=ExtResource("15_c1yl2")]
+position = Vector2(8288, -32)
+
+[node name="OneByOne174" parent="." instance=ExtResource("15_c1yl2")]
+position = Vector2(8352, -32)
+
+[node name="OneByOne175" parent="." instance=ExtResource("15_c1yl2")]
+position = Vector2(8416, -32)
+
+[node name="OneByOne176" parent="." instance=ExtResource("15_c1yl2")]
+position = Vector2(8480, -32)
+
+[node name="OneByOne177" parent="." instance=ExtResource("15_c1yl2")]
+position = Vector2(8544, -32)
