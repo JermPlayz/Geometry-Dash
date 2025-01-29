@@ -10,14 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://cb4h8qxj7sxw6" path="res://Objects/spike_small.tscn" id="10_6xyps"]
 [ext_resource type="PackedScene" uid="uid://b1ro6qx6ugxdg" path="res://Objects/dash.tscn" id="10_lfl6i"]
 [ext_resource type="PackedScene" uid="uid://7wadv3tos4o1" path="res://Objects/portal.tscn" id="11_io3j7"]
-[ext_resource type="PackedScene" uid="uid://cqlodrtd4p2ke" path="res://Objects/speed_boost.tscn" id="12_bnl6w"]
+[ext_resource type="PackedScene" path="res://Objects/speed_boost.tscn" id="12_bnl6w"]
 [ext_resource type="AudioStream" uid="uid://cdpfh46dhjqx0" path="res://Background Music/Cut 1 Lost It To Trying - Instrumental.mp3" id="12_p0ujx"]
-[ext_resource type="PackedScene" uid="uid://cv1pdn3qt48st" path="res://Objects/slope.tscn" id="13_n8td3"]
-[ext_resource type="PackedScene" uid="uid://cdbsbl2jlue7o" path="res://Objects/block_decorative_corner.tscn" id="14_1fpvp"]
-[ext_resource type="PackedScene" uid="uid://bjasfqhodq3q8" path="res://Objects/block_decorative_black.tscn" id="15_c1yl2"]
-[ext_resource type="PackedScene" uid="uid://bm82gf1w6a78a" path="res://Objects/block_decorative_top.tscn" id="16_y8rfr"]
-[ext_resource type="PackedScene" uid="uid://sd15egfv422p" path="res://Objects/block_decorative_edge.tscn" id="17_4w4n3"]
-[ext_resource type="PackedScene" uid="uid://dei61myrj571q" path="res://Objects/slope_inverted.tscn" id="18_wdtcs"]
+[ext_resource type="PackedScene" path="res://Objects/slope.tscn" id="13_n8td3"]
+[ext_resource type="PackedScene" path="res://Objects/block_decorative_corner.tscn" id="14_1fpvp"]
+[ext_resource type="PackedScene" path="res://Objects/block_decorative_black.tscn" id="15_c1yl2"]
+[ext_resource type="PackedScene" path="res://Objects/block_decorative_top.tscn" id="16_y8rfr"]
+[ext_resource type="PackedScene" path="res://Objects/block_decorative_edge.tscn" id="17_4w4n3"]
+[ext_resource type="PackedScene" path="res://Objects/slope_inverted.tscn" id="18_wdtcs"]
 
 [sub_resource type="GDScript" id="GDScript_g50re"]
 script/source = "extends Node2D
@@ -807,15 +807,15 @@ position = Vector2(7008, 640)
 position = Vector2(2240, -32)
 rotation = 3.14159
 
-[node name="Spike51" parent="." instance=ExtResource("9_5vgc8")]
+[node name="Spike103" parent="." instance=ExtResource("9_5vgc8")]
 position = Vector2(2112, -32)
 rotation = 3.14159
 
-[node name="Spike49" parent="." instance=ExtResource("9_5vgc8")]
+[node name="Spike104" parent="." instance=ExtResource("9_5vgc8")]
 position = Vector2(2240, -32)
 rotation = 3.14159
 
-[node name="Spike51" parent="." instance=ExtResource("9_5vgc8")]
+[node name="Spike107" parent="." instance=ExtResource("9_5vgc8")]
 position = Vector2(2112, -32)
 rotation = 3.14159
 
@@ -831,7 +831,7 @@ position = Vector2(928, 640)
 [node name="Spike6" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(1024, 640)
 
-[node name="Spike104" parent="." instance=ExtResource("10_6xyps")]
+[node name="Spike108" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(1216, 640)
 
 [node name="Dash" parent="." instance=ExtResource("10_lfl6i")]
@@ -886,7 +886,7 @@ position = Vector2(4704, 224)
 [node name="OneByOne18" parent="." instance=ExtResource("8_8tlyb")]
 position = Vector2(4704, 288)
 
-[node name="Spike103" parent="." instance=ExtResource("5_c6ogl")]
+[node name="Spike111" parent="." instance=ExtResource("5_c6ogl")]
 position = Vector2(4640, 352)
 rotation = -1.5708
 
@@ -917,29 +917,29 @@ type = 3
 position = Vector2(6304, 320)
 type = 3
 
-[node name="Spike107" parent="." instance=ExtResource("10_6xyps")]
+[node name="Spike142" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(4960, 640)
 
-[node name="Spike111" parent="." instance=ExtResource("10_6xyps")]
+[node name="Spike143" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(5312, 640)
 
-[node name="Spike142" parent="." instance=ExtResource("10_6xyps")]
+[node name="Spike145" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(5632, 96)
 rotation = 3.14159
 
-[node name="Spike143" parent="." instance=ExtResource("10_6xyps")]
+[node name="Spike153" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(5728, 96)
 rotation = 3.14159
 
-[node name="Spike145" parent="." instance=ExtResource("10_6xyps")]
+[node name="Spike170" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(5888, 96)
 rotation = 3.14159
 
-[node name="Spike153" parent="." instance=ExtResource("10_6xyps")]
+[node name="Spike171" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(5984, 96)
 rotation = 3.14159
 
-[node name="Spike108" parent="." instance=ExtResource("9_5vgc8")]
+[node name="Spike172" parent="." instance=ExtResource("9_5vgc8")]
 position = Vector2(5056, 640)
 
 [node name="Portal" parent="." instance=ExtResource("11_io3j7")]

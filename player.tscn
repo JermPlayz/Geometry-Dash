@@ -104,7 +104,7 @@ func _physics_process(delta):
 					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/4, SPEED)
 				else :
 					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/2, SPEED)
-			
+		
 		velocity.x = SPEED * delta
 		move_and_slide()
 
