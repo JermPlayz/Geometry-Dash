@@ -728,6 +728,14 @@ rotation = 3.14159
 position = Vector2(2112, -32)
 rotation = 3.14159
 
+[node name="Spike49" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(2240, -32)
+rotation = 3.14159
+
+[node name="Spike51" parent="." instance=ExtResource("9_5vgc8")]
+position = Vector2(2112, -32)
+rotation = 3.14159
+
 [node name="Spike2" parent="." instance=ExtResource("10_6xyps")]
 position = Vector2(2432, 640)
 
