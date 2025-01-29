@@ -1,6 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://h3vvdqbaln6r"]
 
 [ext_resource type="PackedScene" uid="uid://djxrnpm4ot8lf" path="res://player.tscn" id="1_b0c6e"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://Objects/block.tscn" id="2_05qlf"]
 [ext_resource type="PackedScene" uid="uid://7un5eptgd480" path="res://Objects/spike.tscn" id="5_c6ogl"]
 [ext_resource type="PackedScene" uid="uid://cf2rypb2ppoy8" path="res://Objects/orb.tscn" id="5_kn38k"]
@@ -18,6 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://bm82gf1w6a78a" path="res://Objects/block_decorative_top.tscn" id="16_y8rfr"]
 [ext_resource type="PackedScene" uid="uid://sd15egfv422p" path="res://Objects/block_decorative_edge.tscn" id="17_4w4n3"]
 [ext_resource type="PackedScene" uid="uid://dei61myrj571q" path="res://Objects/slope_inverted.tscn" id="18_wdtcs"]
+=======
+[ext_resource type="PackedScene" uid="uid://dbilgqy8ya23r" path="res://one_by_one.tscn" id="2_05qlf"]
+[ext_resource type="PackedScene" uid="uid://7un5eptgd480" path="res://spike.tscn" id="5_c6ogl"]
+[ext_resource type="PackedScene" uid="uid://cf2rypb2ppoy8" path="res://orb.tscn" id="5_kn38k"]
+[ext_resource type="AudioStream" uid="uid://c6xymet0pelfr" path="res://Background Music/Lost It To Trying - Instrumental.mp3" id="7_7gmmv"]
+>>>>>>> Stashed changes
 
 [sub_resource type="GDScript" id="GDScript_g50re"]
 script/source = "extends Node2D
