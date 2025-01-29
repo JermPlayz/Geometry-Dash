@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdpfh46dhjqx0"
+path="res://.godot/imported/Cut 1 Lost It To Trying - Instrumental.mp3-90eb8e140cc101bfa8f93a1f00566695.mp3str"
+
+[deps]
+
+source_file="res://Background Music/Cut 1 Lost It To Trying - Instrumental.mp3"
+dest_files=["res://.godot/imported/Cut 1 Lost It To Trying - Instrumental.mp3-90eb8e140cc101bfa8f93a1f00566695.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

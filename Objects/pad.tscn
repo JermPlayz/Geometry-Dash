@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cr1ewxuaxg23g"]
 
 [ext_resource type="Script" path="res://Code/pad.gd" id="1_lmyrb"]
-[ext_resource type="Texture2D" uid="uid://cl0m42rhnbtmv" path="res://Sprites/YellowJumpPad.webp" id="2_m8iaa"]
+[ext_resource type="Texture2D" uid="uid://tnhl3to6k2ul" path="res://Sprites/YellowJumpPad.webp" id="2_m8iaa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_36mx5"]
 size = Vector2(64, 16)
