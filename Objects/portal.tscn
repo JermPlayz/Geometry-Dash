@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ds2mr58muiji2" path="res://Sprites/CubePortalLabelled.webp" id="2_1hdrd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbp1l"]
-size = Vector2(60, 106)
+size = Vector2(42, 506)
 
 [node name="Portal" type="Area2D" groups=["portal"]]
 script = ExtResource("1_id686")
