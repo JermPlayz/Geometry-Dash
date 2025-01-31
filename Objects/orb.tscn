@@ -15,4 +15,5 @@ scale = Vector2(0.533333, 0.533333)
 texture = ExtResource("2_2xcyi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["orb"]]
+scale = Vector2(1.15, 1.15)
 shape = SubResource("RectangleShape2D_36mx5")

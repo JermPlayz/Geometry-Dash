@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxxf5hm6vl5lt"]
+[gd_scene load_steps=4 format=3 uid="uid://3a07dbbd6tp4"]
 
 [ext_resource type="Texture2D" uid="uid://bg3rt323mpape" path="res://Sprites/WavySlope02.webp" id="1_l4bni"]
 [ext_resource type="Texture2D" uid="uid://d1fi5t1xi0gbh" path="res://Sprites/BlackSlope02.webp" id="2_u4eqc"]

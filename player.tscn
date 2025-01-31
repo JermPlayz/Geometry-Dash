@@ -104,7 +104,23 @@ func _physics_process(delta):
 					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/4, SPEED)
 				else :
 					$Sprite2D.rotation += move_toward(rotation_degrees, 3.14159/2, SPEED)
+			
+		velocity.x = SPEED * delta
+		move_and_slide()
 		
+	if isBall == true :
+		$Sprite2D.rotation_degrees += 380 * delta
+		velocity.y += gravity * delta
+		if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+			gravity = -gravity
+			JUMP_VELOCITY = -JUMP_VELOCITY
+			rotation = -rotation
+			velocity.y = JUMP_VELOCITY
+		if Input.is_action_pressed(\"ui_accept\") and is_on_ceiling():
+			gravity = -gravity
+			JUMP_VELOCITY = -JUMP_VELOCITY
+			rotation = -rotation
+			velocity.y = -JUMP_VELOCITY
 		velocity.x = SPEED * delta
 		move_and_slide()
 
@@ -112,6 +128,7 @@ func Explode():
 	SPEED = 0
 	JUMP_VELOCITY = 0
 	$Sprite2D.visible = false
+	$AudioStreamPlayer2D2.play()
 	$AudioStreamPlayer2D.stop()
 	$Timer.start()
 
@@ -156,7 +173,7 @@ func _on_external_area_entered(area: Area2D) -> void:
 				isBall = true
 				isUFO = false
 			3 :
-				$Sprite2D.texture = load(\"res://Sprites/Ball.webp\")
+				$Sprite2D.texture = load(\"res://Sprites/UFO.webp\")
 				isCube = false
 				isWave = false
 				isBall = false
@@ -173,11 +190,16 @@ func _on_external_area_entered(area: Area2D) -> void:
 			1 :
 				SPEED = 35500
 			2 :
-				SPEED = 35500 * 2
+				SPEED = 35500 * 1.35
 			3 :
-				SPEED = 35500 * 3
+				SPEED = 35500 * 1.75
 			4 :
-				SPEED = 35500 * 4
+				SPEED = 35500 * 2.5
+				
+	if area.is_in_group(\"camera\") :
+		var tween = get_tree().create_tween()
+		tween.tween_property($Camera2D, \"zoom\", Vector2(1.5, 1.5), .1)
+
 
 func _on_external_area_exited(area: Area2D) -> void:
 	if area.is_in_group(\"orb\") :
@@ -226,6 +248,9 @@ script = ExtResource("2_l05e3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_uq4rx")
 debug_color = Color(0.993422, 0.0750448, 1.34766e-06, 0.42)
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="External" to="." method="_on_external_area_entered"]
