@@ -122,7 +122,18 @@ func _physics_process(delta):
 			rotation = -rotation
 			velocity.y = -JUMP_VELOCITY
 		velocity.x = SPEED * delta
+			
+		if isOrb and Input.is_action_just_pressed(\"ui_accept\"):
+			velocity.y = -forceOrb
+			if canInvert == true :
+				gravity = -gravity
+				JUMP_VELOCITY = -JUMP_VELOCITY
+				isOrb = false
+				rotation = -rotation
+				canInvert = false
+			
 		move_and_slide()
+		
 
 func Explode():
 	SPEED = 0
@@ -194,11 +205,15 @@ func _on_external_area_entered(area: Area2D) -> void:
 			3 :
 				SPEED = 35500 * 1.75
 			4 :
-				SPEED = 35500 * 2.5
+				SPEED = 35500 * 2.2
 				
 	if area.is_in_group(\"camera\") :
-		var tween = get_tree().create_tween()
-		tween.tween_property($Camera2D, \"zoom\", Vector2(1.5, 1.5), .1)
+		if area.is_in_group(\"camera1\") :
+			var tween = get_tree().create_tween()
+			tween.tween_property($Camera2D, \"zoom\", Vector2(1.5, 1.5), .1)
+		if area.is_in_group(\"camera2\") :
+			var tween = get_tree().create_tween()
+			tween.tween_property($Camera2D, \"zoom\", Vector2(3, 3), .1)
 
 
 func _on_external_area_exited(area: Area2D) -> void:
